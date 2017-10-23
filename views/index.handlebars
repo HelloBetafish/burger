@@ -1,12 +1,13 @@
 <h1>Eat-da-Burger!</h1>
 <img src="/assets/img/burger.png alt="Burger">
 
+<h2>Burgers to eat!</h2>
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
       <li>
-        {{name}}
-        <button class="change-state" data-id="{{id}}" data-state = "uneaten">
+        {{this.burger_name}}
+        <button class="change-state" data-id="{{this.id}}" data-state = "uneaten">
           Devour it!
         </button>
       </li>
@@ -31,7 +32,7 @@
     {{#if devoured}}
       <li>
         {{name}}
-        <button class="change-state" data-id="{{id}}" data-state = "eaten">
+        <button class="change-state" data-id="{{this.id}}" data-state = "eaten">
           Devour it!
         </button>
       </li>

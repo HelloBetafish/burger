@@ -29,12 +29,15 @@ function objToSql(ob) {
       arr.push(key + "=" + value);
     }
   }
+    // translate array of strings to a single comma-separated string
+  return arr.toString();
+}
 
   // Object for all our SQL statement functions.
 var orm = {
   selectAll: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
-    connection.query(queryString, function(err, res) {
+    connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
@@ -53,7 +56,7 @@ var orm = {
 
     console.log(queryString);
 
-    connection.query(queryString, vals, function(err, res) {
+    connection.query(queryString, vals, function(err, result) {
       if (err) {
         throw err;
       }
@@ -70,7 +73,7 @@ var orm = {
     queryString += condition;
 
     console.log(queryString);
-    connection.query(queryString, function(err, res) {
+    connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
@@ -78,7 +81,7 @@ var orm = {
       cb(result);
     });
   }
-}
+};
 
-// Export the orm object for the model (cat.js).
+// Export the orm object for the model (burger.js).
 module.exports = orm;
