@@ -3,9 +3,9 @@ body {
   background: repeating-linear-gradient(
   to right,
   #f6ba52,
-  #f6ba52 10px,
-  #ffd180 10px,
-  #ffd180 20px
+  #f6ba52 20px,
+  #ffd180 20px,
+  #ffd180 40px
   );
   font-family: 'Permanent Marker', cursive;
 }
@@ -17,16 +17,30 @@ img {
 
 h1, h2 {
   text-align: center;
+  color: darkred;
 }
 
 button {
   margin: 5px;
+  background-color: navy;
+  color: white;
+  padding: 7px;
+  border-radius: 50%;
 }
 
 ul {
   list-style-type:none;
 }
 
-.eaten {
-  color: blue;
+li {
+  color: darkgreen;
 }
+
+label {
+  color: black;
+}
+
+s {
+  color: darkblue;
+}
+
