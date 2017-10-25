@@ -7,8 +7,8 @@
   {{#each burgers}}
     {{#unless devoured}}
       <li>
-        {{this.burger_name}}
-        <button class="change-state" data-id="{{this.id}}" data-newstate="true">
+        {{burger_name}}
+        <button class="change-state" data-id="{{id}}">
           Devour it!
         </button>
       </li>

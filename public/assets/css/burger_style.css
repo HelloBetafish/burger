@@ -1,6 +1,30 @@
+body {
+  text-align: center;
+  background: repeating-linear-gradient(
+  to right,
+  #f6ba52,
+  #f6ba52 10px,
+  #ffd180 10px,
+  #ffd180 20px
+  );
+  font-family: 'Permanent Marker', cursive;
+}
+
 img {
   height: 150px;
   width: 150px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+}
+
+ul {
+  list-style-type:none;
 }
 
 .eaten {
