@@ -64,11 +64,12 @@ var orm = {
       cb(result);
     });
   },
-  updateOne: function(table, ojbColVals, condition, cb) {
+  // An example of objColVals would be {name: panther, sleepy: true}
+  updateOne: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
-    queryString += "SET ";
-    queryString += objToSql(ObjColVals);
+    queryString += " SET ";
+    queryString += objToSql(objColVals);
     queryString += " WHERE ";
     queryString += condition;
 
