@@ -13,7 +13,7 @@ else {
     password: "r00t",
     database: "burgers_db"
   });
-}
+};
 
 // Make connection.
 connection.connect(function(err) {
